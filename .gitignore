@@ -6,4 +6,6 @@ Packages/*
 Temp/*
 *.app
 
+GaiaCompiled_RV_TAP.txt
+
 .DS_Store
