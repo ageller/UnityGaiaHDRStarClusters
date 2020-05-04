@@ -1,0 +1,9 @@
+Library/*
+ProjectSettings/*
+obj/*
+Logs/*
+Packages/*
+Temp/*
+*.app
+
+.DS_Store
