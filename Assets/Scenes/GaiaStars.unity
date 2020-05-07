@@ -302,8 +302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: OCdata_forUnity.txt
-  material: {fileID: 2100000, guid: 850ad047547ea444fb370ffd2f385d8d, type: 2}
   color: {r: 0, g: 1, b: 0, a: 1}
+  font: {fileID: 12800000, guid: a7648c8f687b348ed8e728b781e2c923, type: 3}
+  fontsize: 6
 --- !u!4 &604740918
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604740916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 587.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -756,6 +757,7 @@ GameObject:
   - component: {fileID: 1297650288}
   - component: {fileID: 1297650287}
   - component: {fileID: 1297650286}
+  - component: {fileID: 1297650289}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1004,6 +1006,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad9c5506d27b4c1497e129cd97184c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1297650289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297650280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a577da1269a6a49cfabf1ffb3d040e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1333702289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333702291}
+  - component: {fileID: 1333702290}
+  m_Layer: 0
+  m_Name: GlobularClusters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1333702290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333702289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab7f71aff8304e84a55cbc126b1f7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: GCdata_forUnity.txt
+  color: {r: 1, g: 0, b: 0.9157233, a: 1}
+  font: {fileID: 12800000, guid: a7648c8f687b348ed8e728b781e2c923, type: 3}
+  fontsize: 50
+--- !u!4 &1333702291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333702289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584858453
 GameObject:
   m_ObjectHideFlags: 0

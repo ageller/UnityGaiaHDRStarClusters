@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GenerateStarClusterSphere : MonoBehaviour
 {
 
 	public string fileName;     //filename within the data folder
-	public Material material;
+	//public Material material;
 	public Color color;
+	public Font font;
+	public int fontsize = 6;
 
 	private string dataFileName;
 	private int ParticleCount = 0; 
@@ -41,8 +44,8 @@ public class GenerateStarClusterSphere : MonoBehaviour
 
 			names[i] = data[0];
 			positions[i] = new Vector3(float.Parse(data[1]), float.Parse(data[2]), float.Parse(data[3]));
-			sizes[i] = float.Parse(data[4]);
-			//positions[i] = new Vector3(1f,0f,0f);
+			sizes[i] = float.Parse(data[4])*2f; //want a diameter I think
+			//positions[i] = new Vector3(10f,10f,10f);
 			//sizes[i] = 100f;
 		}
 		reader.Close();
@@ -63,11 +66,47 @@ public class GenerateStarClusterSphere : MonoBehaviour
 			wr.ShowBackFaces = true;
 			// wr.enabled = false;
 
-			//I might need a second to show the back faces...
 
-			var renderer = sphere.GetComponent<Renderer>();
-			renderer.sharedMaterial = material;
-			renderer.sharedMaterial.color = color;
+			// var renderer = sphere.GetComponent<Renderer>();
+			// renderer.sharedMaterial = material;
+			// renderer.sharedMaterial.color = color;
+
+			//also add a canvas with a label containing the name
+			// Canvas
+			//https://docs.unity3d.com/ScriptReference/Canvas.html
+			GameObject myGO = new GameObject();
+			myGO.name = "Canvas";
+			myGO.transform.SetParent(sphere.transform);
+			//myGO.transform.position = new Vector3(positions[i].x, positions[i].y + 0.1f, positions[i].z);
+			
+			Canvas myCanvas = myGO.AddComponent<Canvas>();
+			//myCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+			myCanvas.renderMode = RenderMode.WorldSpace;
+			myCanvas.transform.localPosition = new Vector3(0f, 1f, 0f); //not sure what the units are here
+
+			// myGO.AddComponent<CanvasScaler>();
+			// myGO.AddComponent<GraphicRaycaster>();
+
+			// Text
+			GameObject myText = new GameObject();
+			myText.name = "Text";
+			myText.transform.SetParent(myGO.transform);
+			myText.transform.localPosition = new Vector3(0f,0f,0f);
+
+
+
+			Text text = myText.AddComponent<Text>();
+			text.text = names[i];
+			text.color = color;
+			text.font = font;
+			text.fontSize = fontsize;
+			text.material = font.material;
+			text.alignment = TextAnchor.MiddleCenter;
+
+			var rectTransform = text.transform as RectTransform;
+			rectTransform.sizeDelta = new Vector2(500f, rectTransform.sizeDelta.y);
+			//I need to set the width to 500 and center the text
+			//Also I want to make the text always face the camera and also remain the same size on the screen
 		}
 
 	}

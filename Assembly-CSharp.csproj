@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4B195762-3139-2130-2700-545FCBA76CA5}</ProjectGuid>
+    <ProjectGuid>{77FE045B-1685-6292-B258-321969AF9E84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\GenerateStarClusterSphere.cs" />
      <Compile Include="Assets\Scripts\GUITextDisplay.cs" />
      <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />
+     <Compile Include="Assets\Scripts\RayCastCluster.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\WireframeRenderer\Scripts\WireframeRenderer.cs" />
@@ -69,49 +70,49 @@
      <None Include="Assets\Data\GCdata_forUnity.txt" />
      <None Include="Assets\WireframeRenderer\Shaders\WireframeBarycentricCoordinates.shader" />
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualEffectGraph.Runtime">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualEffectGraph.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -318,13 +319,13 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Volumes/highnoon2go/highnoon/VISUALIZATIONS/Unity/UnityGaiaHDRStarClusters/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
