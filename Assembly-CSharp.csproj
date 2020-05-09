@@ -55,15 +55,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AsciiDataToParticle_simple.cs" />
      <Compile Include="Assets\Scripts\AsciiDataToTexture.cs" />
+     <Compile Include="Assets\Scripts\DropdownController.cs" />
      <Compile Include="Assets\Scripts\ExtendedFlycam.cs" />
      <Compile Include="Assets\Scripts\GenerateStarClusterSphere.cs" />
      <Compile Include="Assets\Scripts\GUITextDisplay.cs" />
+     <Compile Include="Assets\Scripts\InputController.cs" />
      <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />
      <Compile Include="Assets\Scripts\RayCastCluster.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\WireframeRenderer\Scripts\WireframeRenderer.cs" />
-     <None Include="Assets\Data\GaiaCompiled_RV_TAP.txt" />
+     <None Include="Assets\Data\GaiaCompiled_RV.txt" />
      <None Include="Assets\WireframeRenderer\Shaders\WireframeBarycentricCoordinatesNoCull.shader" />
      <None Include="Assets\WireframeRenderer\Shaders\WireframeBarycentricCoordinatesCore.cginc" />
      <None Include="Assets\Data\OCdata_forUnity.txt" />

@@ -61,7 +61,7 @@ public class MouseOrbitImproved : MonoBehaviour {
 		if (target){
 			//x,y rotation
 			var mouseBtn = Input.GetMouseButton(0);
-			if (mouseBtn){// && !EventSystem.current.IsPointerOverGameObject()){
+			if (mouseBtn && !EventSystem.current.IsPointerOverGameObject()){
 				dx = Input.GetAxis("Mouse X")*xSpeed;
 				dy = Input.GetAxis("Mouse Y")*ySpeed;
 
@@ -75,7 +75,7 @@ public class MouseOrbitImproved : MonoBehaviour {
 			Quaternion rotation = Quaternion.Euler(y, x, 0);
 
 			//distance
-			if (Input.GetAxis("Mouse ScrollWheel") != 0){// && !EventSystem.current.IsPointerOverGameObject ()){
+			if (Input.GetAxis("Mouse ScrollWheel") != 0 && !EventSystem.current.IsPointerOverGameObject ()){
 				dz = Input.GetAxis("Mouse ScrollWheel");
 			} else {
 				dz *= (1.0f - frictionUse);
@@ -84,11 +84,11 @@ public class MouseOrbitImproved : MonoBehaviour {
 			float dScale = Mathf.Pow(1.0f + distance, 0.5f);
 			distance = Mathf.Clamp(distance - dz*dScale, distanceMin, distanceMax);
 
-			RaycastHit hit;
-			if (Physics.Linecast (target.position, transform.position, out hit)){
-				//do something in here when another object is in front of the camera?
-				//distance -=  hit.distance;
-			}
+			// RaycastHit hit;
+			// if (Physics.Linecast (target.position, transform.position, out hit)){
+			// 	//do something in here when another object is in front of the camera?
+			// 	//distance -=  hit.distance;
+			// }
 			Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
 			Vector3 position = rotation*negDistance + target.position;
 

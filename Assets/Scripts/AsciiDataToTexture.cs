@@ -13,7 +13,6 @@ using System.Threading;
 using UnityEngine.VFX;
 using UnityEditor.VFX;
 using UnityEditor.Experimental.Rendering.HDPipeline;
-using UnityEditor.VFX.UI;
 
 public class AsciiDataToTexture : MonoBehaviour {
 

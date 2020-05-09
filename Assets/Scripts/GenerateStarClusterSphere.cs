@@ -12,6 +12,7 @@ public class GenerateStarClusterSphere : MonoBehaviour
 	public Color color;
 	public Font font;
 	public int fontsize = 6;
+	public Dropdown dropdown;
 
 	private string dataFileName;
 	private int ParticleCount = 0; 
@@ -51,8 +52,15 @@ public class GenerateStarClusterSphere : MonoBehaviour
 		reader.Close();
 	}
 
-	void createSpheres(){
+	void createObjects(){
+		dropdown.options.Clear();
+
+		//want to set the color here, but don't have time to figure this out
+		//dropdown.GetComponent("Label").GetComponent<Text>().color = color;
+
 		for (int i = 0; i < ParticleCount; i++) {
+
+			//spheres
 			GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 			sphere.name = names[i];
 			sphere.transform.position = positions[i];
@@ -71,6 +79,7 @@ public class GenerateStarClusterSphere : MonoBehaviour
 			// renderer.sharedMaterial = material;
 			// renderer.sharedMaterial.color = color;
 
+			///////////////////////
 			//also add a canvas with a label containing the name
 			// Canvas
 			//https://docs.unity3d.com/ScriptReference/Canvas.html
@@ -105,16 +114,22 @@ public class GenerateStarClusterSphere : MonoBehaviour
 
 			var rectTransform = text.transform as RectTransform;
 			rectTransform.sizeDelta = new Vector2(500f, rectTransform.sizeDelta.y);
-			//I need to set the width to 500 and center the text
 			//Also I want to make the text always face the camera and also remain the same size on the screen
+
+			/////////////////////
+			//dropdown
+			dropdown.options.Add (new Dropdown.OptionData() {text = names[i]});
+
 		}
 
 	}
+
+
 	// Start is called before the first frame update
 	void Start(){
 		dataFileName = Application.dataPath+"/Data/"+fileName;
 		ReadAsciiFile();
-		createSpheres();
+		createObjects();
 
 	}
 
