@@ -7,5 +7,7 @@ Temp/*
 *.app
 
 GaiaCompiled_RV_TAP.txt
+GaiaCompiled_RV.txt
+
 
 .DS_Store
