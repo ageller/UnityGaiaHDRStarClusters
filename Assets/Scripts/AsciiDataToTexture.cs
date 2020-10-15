@@ -12,7 +12,7 @@ using System.Threading;
 
 using UnityEngine.VFX;
 using UnityEditor.VFX;
-using UnityEditor.Experimental.Rendering.HDPipeline;
+using UnityEditor.Rendering.HighDefinition;
 
 public class AsciiDataToTexture : MonoBehaviour {
 
@@ -35,7 +35,7 @@ public class AsciiDataToTexture : MonoBehaviour {
 	private int maxTexSize = 10000; //Textures can only be 16384 in width (I think)
 	private GameObject mainCamera;
 
-	private UnityEngine.Experimental.VFX.VisualEffect vfx;
+	private UnityEngine.VFX.VisualEffect vfx;
 
 	private Texture2D PosTex;
 	private Texture2D SizeTex;
@@ -214,7 +214,7 @@ public class AsciiDataToTexture : MonoBehaviour {
 
 	void Start(){
 		mainCamera = GameObject.Find("MainCamera");
-		vfx = this.GetComponent<UnityEngine.Experimental.VFX.VisualEffect>();
+		vfx = this.GetComponent<UnityEngine.VFX.VisualEffect>();
 		dataFileName = Application.dataPath+"/Data/"+fileName;
 		colormapWidth = colormap.width;
 
