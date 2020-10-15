@@ -1,8 +1,8 @@
 Library/*
-ProjectSettings/*
+# ProjectSettings/*
 obj/*
 Logs/*
-Packages/*
+# Packages/*
 Temp/*
 *.app
 
@@ -11,3 +11,6 @@ GaiaCompiled_RV.txt
 
 
 .DS_Store
+.idea
+*.csproj
+*.sln
